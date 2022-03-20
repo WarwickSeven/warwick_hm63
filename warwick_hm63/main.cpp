@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -40,7 +41,8 @@ void combineFiles(const string &fn1, const string &fn2, const string &fn3)
     }
         else
         {
-            cout << "Error. Can not open file.";
+            cerr << "file read error.";
+            exit(1);
         }
     cin.get();
 }
